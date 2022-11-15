@@ -22,7 +22,7 @@ jobs:
         java-version: '1.8.x'
         
     - name: Build with Maven
-      run: mvn package --file helloworld
+      run: mvn package --file helloworld.py
       
     - name: Build and Tag image
       run: |
