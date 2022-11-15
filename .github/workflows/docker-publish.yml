@@ -20,7 +20,7 @@ jobs:
     - name: Scan image
       uses: Azure/container-scan@v0
       with:
-        image-name: my-image-name:Labo2
+        image-name: my-image-name:labo2
         severity-threshold: CRITICAL
         run-quality-checks: true
         allowedlist: helmo_pasi_labo910/workflows/allowedlist.yaml
