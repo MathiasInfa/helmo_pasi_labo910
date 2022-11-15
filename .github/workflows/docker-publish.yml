@@ -15,14 +15,6 @@ jobs:
         login-server: ${{ secrets.ACR_LOGIN_SERVER }}
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-
-    - name: Setup Java 1.8.x
-      uses: actions/setup-java@v1
-      with:
-        java-version: '1.8.x'
-        
-    - name: Build with Maven
-      run: mvn package --file helloworld.py
       
     - name: Build and Tag image
       run: |
