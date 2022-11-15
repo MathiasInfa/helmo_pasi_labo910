@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the Docker image
-      run: docker build . --file dockerfile --tag ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:labo2:${{ github.run_number }}
+      run: docker build . --file dockerfile --tag my-image-name:Labo2
 
     - name: Scan image
       uses: Azure/container-scan@v0
