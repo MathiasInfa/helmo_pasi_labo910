@@ -34,6 +34,5 @@ jobs:
         
     - name: Push Docker image to Azure Container Registry
       run: |
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:labo2:${{ github.run_number }}
- 
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:labo2
       
