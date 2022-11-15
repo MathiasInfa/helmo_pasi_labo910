@@ -1,10 +1,4 @@
-FROM python:3
-
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-CMD [ "python", "./helloworld.py" ]
+FROM openjdk:11-jre-stretch
+ADD target/spring-petclinic-2.4.2.jar spring-petclinic-2.4.2.jar
+EXPOSE 8080
+ENTRYPOINT [ "java", "-jar", "spring-petclinic-2.4.2.jar" ]
