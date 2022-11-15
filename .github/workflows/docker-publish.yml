@@ -15,12 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the Docker image
-      run: docker build . --file dockerfile --tag my-image-name:labo2
+      run: docker build . --file dockerfile --tag ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:labo2
 
     - name: Scan image
       uses: Azure/container-scan@v0
       with:
-        image-name: my-image-name:labo2
+        image-name: ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:labo2
         severity-threshold: CRITICAL
         run-quality-checks: true
         allowedlist: helmo_pasi_labo910/workflows/allowedlist.yaml
