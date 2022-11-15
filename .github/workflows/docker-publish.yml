@@ -32,8 +32,8 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
         
-    - name: Push image
+    - name: Push Docker image to Azure Container Registry
       run: |
-        docker push . --file dockerfile --tag my-image-name:Labo2
-
-   
+        docker push my-image-name:Labo2     
+ 
+      
