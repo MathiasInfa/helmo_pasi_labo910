@@ -34,9 +34,6 @@ jobs:
         
     - name: Push image
       run: |
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/spring-petclinic:${{ github.run_number }}
+        docker push . --file dockerfile --tag my-image-name:Labo2
 
-      
-   
-    
    
