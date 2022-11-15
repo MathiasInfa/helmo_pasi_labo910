@@ -23,7 +23,7 @@ jobs:
         image-name: my-image-name:Labo2
         severity-threshold: CRITICAL
         run-quality-checks: true
-        continue-on-error: true
+        allowedlist: helmo_pasi_labo910/workflows/allowedlist.yaml
 
     - name: Login to the Container Registry  
       uses: azure/docker-login@v1
