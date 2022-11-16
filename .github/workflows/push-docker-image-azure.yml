@@ -20,7 +20,7 @@ jobs:
     - name: Scan image
       uses: Azure/container-scan@v0
       with:
-        image-name: ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:my-image-name:docker-azure
+        image-name: ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:docker-azure
         severity-threshold: CRITICAL
         run-quality-checks: true
         allowedlist: helmo_pasi_labo910/workflows/allowedlist.yaml # Ajouter le fichier étape suivante !
