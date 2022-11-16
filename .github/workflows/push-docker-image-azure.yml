@@ -23,7 +23,6 @@ jobs:
         image-name: ${{ secrets.ACR_LOGIN_SERVER }}/my-image-name:docker-azure
         severity-threshold: CRITICAL
         run-quality-checks: true
-        allowedlist: helmo_pasi_labo910/workflows/allowedlist.yaml # Ajouter le fichier étape suivante !
 
     - name: Login to the Container Registry  
       uses: azure/docker-login@v1
